@@ -34,7 +34,7 @@ class Graph_M():
         for i in range(self.V):
             if visited[i] == False:
                 self.topologicalSortPomoc(i, stack, visited)
-        # print(stack)
+        print(stack)
 
     def printMST(self, parent):
         print("Edge \tWeight")
