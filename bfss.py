@@ -11,15 +11,21 @@ class bfss:
         self.graph = defaultdict(list)
 
     def addGraph(self):
-        s = list()
+        macierz = []
+        s = input().split()
         while (len(s) != 0):
-
             s = list(map(int, s))
             macierz.append(s)
             s = input().split()
-        for i in range(len(s)):
-            for j in range(i + 1, len(s)):
-                self.addEdge(i, j)
+            # print(macierz)
+
+        # print(macierz)
+        for i in range(len(macierz[0])):
+            for j in range(i , len(macierz[0])):
+                print(f"i: {i} j: {j}")
+                if macierz[i][j] == 1 and i != j:
+                    print(f"#{i} {j}")
+                    self.addEdge(i, j)
         self.DFS()
         self.BFS()
 
