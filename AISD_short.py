@@ -4,6 +4,7 @@ from qlos import quick
 from graphs import Graph_M
 from knapsack import knapsack
 import os
+import platform
 
 def grafy():
     print("Wprowadz graf w postaci macierzy:")
@@ -60,7 +61,11 @@ def main():
         if program == 3:
             kn.back()
         if program == 4:
-            os.system(r'"./complex_data_structures.exe"')
+            if (platform.system() == "Linux"):
+                os.system(r'"./complex_data_structures.exe"')
+            if (platform.system() == "Windows"):
+                os.system(r'".\complex_data_structures.exe"')
+
             # print("Zapraszamy do uzycia pliku 'complex_data_structures.exe'")
         print()
     """print(
