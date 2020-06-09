@@ -2,7 +2,8 @@ import graphs
 import qlos
 from qlos import quick
 from graphs import Graph_M
-
+from knapsack import knapsack
+import os
 
 def grafy():
     print("Wprowadz graf w postaci macierzy:")
@@ -44,13 +45,24 @@ def qui():
 
 
 def main():
-    print("1. Grafy. 2.Quick\n")
-    print("Wybierz program: ", sep="", end="")
-    program = int(input())
-    if program == 1:
-        grafy()
-    if program == 2:
-        qui()
+    kn = knapsack()
+    while (True):
+        print("Witamy w menu!!")
+        print(" 0 - Wyjscie\n 1 - Grafy\n 2 - QuickSort\n 3 - Plecak\n 4 - Zaawansowane struktury danych (lista jednokierunkowa/drzewo BST)")
+        print("Wybierz program: ", sep="", end="")
+        program = int(input())
+        if program == 0:
+            break
+        if program == 1:
+            grafy()
+        if program == 2:
+            qui()
+        if program == 3:
+            kn.back()
+        if program == 4:
+            os.system(r'"./complex_data_structures.exe"')
+            # print("Zapraszamy do uzycia pliku 'complex_data_structures.exe'")
+        print()
     """print(
         "Wybierz sposób wprowadzania danych [tabela/lista] [t/l]: ", sep="", end="")"""
     # sposob=input()

@@ -3,7 +3,7 @@ import random
 class knapsack:
 
     def back(self):
-        print("Podaj dane do plecakow: ")
+        print("Podaj dane do plecakow (po spacjach): ")
         waga = list(map(int, input("Wagi:    ").split()))
         wartosc = list(map(int, input("Wartosci:").split()))
         pojemnosc = int(input("Pojemnosc:"))
