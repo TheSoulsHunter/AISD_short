@@ -2,7 +2,7 @@ import random
 
 class knapsack:
 
-    def sorts(self):
+    def back(self):
         print("Podaj dane do plecakow: ")
         waga = list(map(int, input("Wagi:    ").split()))
         wartosc = list(map(int, input("Wartosci:").split()))
