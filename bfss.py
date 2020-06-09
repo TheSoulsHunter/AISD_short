@@ -21,12 +21,14 @@ class bfss:
 
         # print(macierz)
         for i in range(len(macierz[0])):
-            for j in range(i , len(macierz[0])):
-                print(f"i: {i} j: {j}")
+            for j in range(len(macierz[0])):
+                # print(f"i: {i} j: {j}")
                 if macierz[i][j] == 1 and i != j:
-                    print(f"#{i} {j}")
+                    # print(f"#{i} {j}")
                     self.addEdge(i, j)
+        print("DFS:")
         self.DFS()
+        print("\nBFS:")
         self.BFS()
 
     # function to add an edge to graph
