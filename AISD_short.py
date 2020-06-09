@@ -5,6 +5,7 @@ from graphs import Graph_M
 from knapsack import knapsack
 import os
 import platform
+from heap_numberofchanges import heap_numberofchanges
 
 def grafy():
     print("Wprowadz graf w postaci macierzy:")
@@ -46,13 +47,15 @@ def qui():
 
 
 def main():
+    hs = heap_numberofchanges()
     kn = knapsack()
     while (True):
         print("Witamy w menu!!")
-        print(" 0 - Wyjscie\n 1 - Grafy\n 2 - QuickSort\n 3 - Plecak\n 4 - Zaawansowane struktury danych (lista jednokierunkowa/drzewo BST)")
+        print(" 0 - Wyjscie\n 1 - Grafy\n 2 - QuickSort\n 3 - Plecak\n 4 - Zaawansowane struktury danych (lista jednokierunkowa/drzewo BST\n 5 - Heapsort")
         print("Wybierz program: ", sep="", end="")
         program = int(input())
         if program == 0:
+            print("Pa, pa!!")
             break
         if program == 1:
             grafy()
@@ -65,6 +68,10 @@ def main():
                 os.system(r'"./complex_data_structures.exe"')
             if (platform.system() == "Windows"):
                 os.system(r'".\complex_data_structures.exe"')
+        if program == 5:
+            # A = list(map(int, input("Lista:").split()))
+            # hs.heapsort(A)
+            print(hs.heapsort(list(map(int, input("Podaj liste (spacje rozdzielaja): ").split()))))
 
             # print("Zapraszamy do uzycia pliku 'complex_data_structures.exe'")
         print()
