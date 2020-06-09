@@ -61,7 +61,7 @@ def main():
         if program == 3:
             kn.back()
         if program == 4:
-            if (platform.system() == "Linux"):
+            if (platform.system() == "Linux" or platform.system() == "Darwin"):
                 os.system(r'"./complex_data_structures.exe"')
             if (platform.system() == "Windows"):
                 os.system(r'".\complex_data_structures.exe"')
