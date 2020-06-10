@@ -53,7 +53,7 @@ def main():
     kn = knapsack()
     while (True):
         print("Witamy w menu!!")
-        print(" 0 - Wyjscie\n 1 - Grafy\n 2 - QuickSort\n 3 - Plecak\n 4 - Zaawansowane struktury danych (lista jednokierunkowa/drzewo BST\n 5 - Heapsort\n 6 - BFS/DFS")
+        print(" 0 - Wyjscie\n 1 - Grafy\n 2 - QuickSort (UWAGA, DZIAŁA DZIWNIE)\n 3 - Plecak\n 4 - Zaawansowane struktury danych (lista jednokierunkowa/drzewo BST\n 5 - Heapsort\n 6 - BFS/DFS")
         print("Wybierz program: ", sep="", end="")
         program = int(input())
         if program == 0:
